@@ -1,5 +1,4 @@
-/* Анимации временно отключены: приоритет — точная вёрстка и стабильность. */
-.hero [data-hero-anim],.reveal,.reveal .card,.reveal .faq-item,.reveal tbody tr{opacity:1;transform:none}
-.bg-blob,.progress-step.current:before,.modal[open] .modal-card,.toast:not([hidden]){animation:none!important}
-*{scroll-behavior:auto}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+/* Анимации и переходы временно отключены: приоритет — точная вёрстка и стабильность. */
+*,*:before,*:after{animation:none!important;transition:none!important}
+html{scroll-behavior:auto}
+.hero [data-hero-anim],.reveal,.reveal .card,.reveal .faq-item,.reveal tbody tr{opacity:1!important;transform:none!important}
