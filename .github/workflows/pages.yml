@@ -37,6 +37,11 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build
 
+      - name: Validate static routes
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}
+        run: node scripts/validate-pages.mjs
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
