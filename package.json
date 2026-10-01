@@ -1,0 +1,16 @@
+{
+  "name": "virage-change",
+  "version": "1.0.0",
+  "description": "Virage Change: сервис обмена криптовалют и рублей. Клиентская часть, админ-панель и API без внешних зависимостей.",
+  "private": false,
+  "type": "module",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "fonts": "node scripts/fetch-fonts.mjs",
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/build.mjs && node --disable-warning=ExperimentalWarning server/main.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server/main.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js"
+  },
+  "license": "UNLICENSED"
+}

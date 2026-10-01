@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Virage Change — интерфейс обмена криптовалют и рублей.">
+<meta name="color-scheme" content="dark light">
+<title>Оплата — Virage Change</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-nav="home">
+<a class="skip" href="#main">К содержимому</a>
+{{BG}}
+{{HEADER}}
+<main id="main" class="page-main"><div class="container"><div class="page-head"><span class="eyebrow">Заявка <span data-order-id></span></span><h1>Оплатите по реквизитам</h1><p>После перевода нажмите «Я оплатил». Статус изменится на проверку.</p></div><div class="grid-2"><section class="card"><div class="status" data-status><span>Ожидает оплаты</span></div><div class="progress"><div class="progress-step current"><strong>Оплата</strong><span>Ожидаем перевод</span></div><div class="progress-step"><strong>Проверка</strong><span>Подтверждение оператором</span></div><div class="progress-step"><strong>Выполнение</strong><span>Подготовка выплаты</span></div><div class="progress-step"><strong>Готово</strong><span>Хэш выплаты</span></div></div><div class="simple-content"><p>Переведите <strong class="mono">100 000 RUB</strong> по реквизитам:</p><div class="pay-address"><code id="pay-ref">+7 900 000-00-00 · DEMO BANK</code><button class="copy-btn" data-copy-target="#pay-ref">Копировать</button></div><p class="muted">Демо-реквизиты. Не переводите реальные деньги.</p><button class="btn btn-primary" data-paid>Я оплатил</button></div></section><aside class="card simple-content"><h3>Получение</h3><p><span class="muted">Сумма</span><br><strong class="mono">1 055.00 USDT</strong></p><p><span class="muted">Сеть</span><br><strong>TRC20</strong></p><p><span class="muted">Заявка</span><br><code class="mono" data-order-id></code></p></aside></div></div></main>
+{{FOOTER}}
+<script type="module" src="/js/app.js"></script>
+<script type="module" src="/js/pay.js"></script>
+</body>
+</html>

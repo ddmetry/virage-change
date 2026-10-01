@@ -1,0 +1,2 @@
+/* Финальная правка 30.09: спокойный слой. Оставляем функциональные анимации, убираем декоративный шум. */
+.glass{backdrop-filter:blur(10px) saturate(1.15);-webkit-backdrop-filter:blur(10px) saturate(1.15)}.btn-primary{box-shadow:none;background:var(--amber)}.btn-primary:before{display:none}.exchange-card{border-radius:28px}.card{border-radius:28px}.bg-curves{opacity:.42}.bg-blob{opacity:.6}.exchange-card:before{opacity:.72}
