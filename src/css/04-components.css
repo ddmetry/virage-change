@@ -8,3 +8,17 @@
 .modal{border:0;padding:0;background:transparent;color:var(--text);width:min(520px,calc(100% - 32px))}.modal::backdrop{background:rgba(0,0,0,.48);backdrop-filter:blur(4px)}.modal-card{border-radius:30px;padding:18px;display:grid;gap:14px}.modal[open] .modal-card{animation:modalIn .2s cubic-bezier(.2,.8,.2,1)}.modal-head{display:flex;justify-content:space-between;align-items:center;padding:4px 4px 8px}.currency-list{display:grid;gap:6px;max-height:360px;overflow:auto}.currency-option{border:0;background:transparent;border-radius:16px;padding:12px;display:flex;align-items:center;gap:12px;text-align:left}.currency-option:hover,.currency-option:focus{background:var(--solid);outline:none}.toast{position:fixed;z-index:100;left:50%;bottom:24px;transform:translateX(-50%);padding:11px 18px;border-radius:999px;font-size:14px}.toast:not([hidden]){animation:toastIn .22s ease}
 .progress{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:24px 0}.progress-step{position:relative;display:grid;gap:8px;padding-top:22px;color:var(--mut);font-size:13px}.progress-step:before{content:"";position:absolute;top:4px;left:0;width:12px;height:12px;border-radius:50%;background:var(--bg-2);border:2px solid var(--line-strong);z-index:2}.progress-step:after{content:"";position:absolute;top:9px;left:12px;width:calc(100% + 2px);height:2px;background:var(--line)}.progress-step:last-child:after{display:none}.progress-step.done,.progress-step.current{color:var(--text)}.progress-step.done:before{background:var(--ok);border-color:var(--ok)}.progress-step.current:before{background:var(--amber);border-color:var(--amber);animation:statusPulse 2s ease-in-out infinite}.pay-address{display:flex;align-items:center;gap:10px;padding:14px;border-radius:18px;background:var(--bg-2);border:1px solid var(--line)}.pay-address code{flex:1;overflow:hidden;text-overflow:ellipsis}.copy-btn{min-height:38px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--solid)}
 @media(max-width:760px){.form-grid{grid-template-columns:1fr}.direction-bar{align-items:flex-start;flex-direction:column}.progress{grid-template-columns:1fr}.progress-step{padding:0 0 0 28px}.progress-step:before{top:5px;left:2px}.progress-step:after{top:16px;left:7px;width:2px;height:calc(100% + 5px)}.order-actions .btn{width:100%}}
+
+.ui-icon{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.currency-icon-img{width:32px;height:32px;display:block;flex:0 0 32px;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.cur-btn .chevron-icon{width:16px;height:16px;color:var(--mut);transition:transform .2s ease}
+.cur-btn:hover .chevron-icon{transform:translateY(1px)}
+.swap-icon{width:22px;height:22px}
+.currency-option .currency-icon-img{box-shadow:0 0 0 1px var(--line)}
+.currency-pair{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.currency-pair img{border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.pair-arrow{width:16px;height:16px;color:var(--mut)}
+.currency-amount{display:inline-flex;align-items:center;gap:10px;margin-top:6px}
+.header-login{display:inline-flex;align-items:center;gap:7px}
+.header-login .ui-icon{width:18px;height:18px}
+.brand-mark img{width:100%;height:100%;border-radius:50%}
