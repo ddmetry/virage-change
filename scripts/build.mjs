@@ -48,7 +48,6 @@ async function walkPages(dir){
 
     html=html.replaceAll(/ style="--i:(\d+)"/g,(_,n)=>` class-temp-i="${n}"`);
     html=html.replaceAll(/ class="([^"]*)" class-temp-i="(\d+)"/g,(_,c,n)=>` class="${c} anim-i-${n}"`);
-    html=rewriteHtml(html);
 
     await writeFile(dest,html);
   }
@@ -68,6 +67,9 @@ async function rewriteOutput(dir){
     } else if(name.endsWith('.html')){
       const html=await readFile(p,'utf8');
       await writeFile(p,rewriteHtml(html));
+    } else if(name.endsWith('.js')){
+      const js=await readFile(p,'utf8');
+      await writeFile(p,js.replaceAll('__BASE_PATH__',base));
     }
   }
 }
