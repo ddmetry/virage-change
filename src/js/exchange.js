@@ -74,10 +74,11 @@ function selectCurrency(side,code){
   if(state.mode==='crypto'&&code==='RUB') return;
   const other=side==='from'?'to':'from';
   const previous=state[side];
+  const oldFrom=state.from;
   if(code===state[other]) state[other]=previous;
   state[side]=code;
-  if(side==='from'&&code!==previous) amountIn.value=String(currencies[code].defaultAmount);
   ensureMode();
+  if(state.from!==oldFrom) amountIn.value=String(currencies[state.from].defaultAmount);
   render();
   modal?.close();
 }
