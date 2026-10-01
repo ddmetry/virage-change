@@ -1,5 +1,5 @@
 const form=document.querySelector('[data-order-form]');
-const basePath=location.pathname.startsWith('/virage-change/')?'/virage-change':'';
+const basePath='__BASE_PATH__';
 form?.addEventListener('submit',e=>{
   e.preventDefault();
   const req=[...form.querySelectorAll('[required]')];
