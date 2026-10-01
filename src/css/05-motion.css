@@ -1,30 +1,5 @@
-.hero [data-hero-anim]{opacity:0;transform:translateY(14px);animation:heroIn .52s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i,0)*60ms)}
-.page-head{animation:pageIn .46s cubic-bezier(.2,.8,.2,1) both}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .52s cubic-bezier(.2,.8,.2,1),transform .52s cubic-bezier(.2,.8,.2,1)}
-.reveal.is-visible{opacity:1;transform:none}
-.reveal .card,.reveal .faq-item,.reveal tbody tr{opacity:0;transform:translateY(8px)}
-.reveal.is-visible .card,.reveal.is-visible .faq-item,.reveal.is-visible tbody tr{animation:childIn .42s cubic-bezier(.2,.8,.2,1) forwards}
-.reveal.is-visible .card:nth-child(2),.reveal.is-visible .faq-item:nth-child(2),.reveal.is-visible tbody tr:nth-child(2){animation-delay:60ms}
-.reveal.is-visible .card:nth-child(3),.reveal.is-visible .faq-item:nth-child(3),.reveal.is-visible tbody tr:nth-child(3){animation-delay:120ms}
-.reveal.is-visible .card:nth-child(4),.reveal.is-visible .faq-item:nth-child(4),.reveal.is-visible tbody tr:nth-child(4){animation-delay:180ms}
-.crossfade{animation:crossfade .28s ease}
-.number-flash{animation:numberFade .22s ease}
-.mobile-sheet:not([hidden]){animation:sheetIn .22s cubic-bezier(.2,.8,.2,1)}
-.theme-icon{transition:transform .28s cubic-bezier(.2,.8,.2,1)}
-html[data-theme="light"] .theme-icon{transform:rotate(22deg)}
-.copy-btn.is-copied .ui-icon{animation:checkIn .24s cubic-bezier(.2,.8,.2,1)}
-.currency-icon-img{transition:transform .2s cubic-bezier(.2,.8,.2,1),filter .2s ease}
-.cur-btn:hover .currency-icon-img,.currency-option:hover .currency-icon-img{transform:scale(1.06)}
-@keyframes heroIn{to{opacity:1;transform:none}}
-@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-@keyframes childIn{to{opacity:1;transform:none}}
-@keyframes sheetIn{from{opacity:0;transform:translateY(-8px) scale(.985)}to{opacity:1;transform:none}}
-@keyframes crossfade{0%{opacity:1;transform:none}45%{opacity:.35;transform:translateY(3px)}100%{opacity:1;transform:none}}
-@keyframes numberFade{0%{opacity:.35;transform:translateY(2px)}100%{opacity:1;transform:none}}
-@keyframes modalIn{from{opacity:0;transform:scale(.96) translateY(5px)}to{opacity:1;transform:none}}
-@keyframes toastIn{from{opacity:0;transform:translate(-50%,8px)}to{opacity:1;transform:translate(-50%,0)}}
-@keyframes checkIn{0%{opacity:0;transform:scale(.6)}100%{opacity:1;transform:scale(1)}}
-@keyframes statusPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,176,0,.34)}50%{box-shadow:0 0 0 8px rgba(255,176,0,0)}}
-@keyframes driftA{from{transform:translate3d(-3%,-2%,0)}to{transform:translate3d(10%,8%,0)}}
-@keyframes driftB{from{transform:translate3d(2%,2%,0)}to{transform:translate3d(-9%,-7%,0)}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}.hero [data-hero-anim],.page-head,.reveal,.reveal .card,.reveal .faq-item,.reveal tbody tr{opacity:1!important;transform:none!important}.bg-blob{animation:none!important}}
+/* Анимации временно отключены: приоритет — точная вёрстка и стабильность. */
+.hero [data-hero-anim],.reveal,.reveal .card,.reveal .faq-item,.reveal tbody tr{opacity:1;transform:none}
+.bg-blob,.progress-step.current:before,.modal[open] .modal-card,.toast:not([hidden]){animation:none!important}
+*{scroll-behavior:auto}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
