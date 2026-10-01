@@ -26,3 +26,18 @@
 .copy-btn{display:inline-flex;align-items:center;gap:7px}
 .copy-btn .ui-icon{width:16px;height:16px}
 .copy-btn.is-copied{border-color:color-mix(in srgb,var(--ok) 48%,var(--line));color:var(--ok)}
+
+/* Static Pages stability + icon alignment */
+.ui-icon{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.currency-icon-img{width:32px;height:32px;display:block;flex:0 0 32px;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.cur-btn{max-width:48%;min-width:118px;justify-content:flex-start;overflow:hidden}.cur-btn [data-from-ticker],.cur-btn [data-to-ticker]{min-width:0;overflow:hidden;text-overflow:ellipsis}.cur-btn .chevron-icon{width:16px;height:16px;margin-left:auto;color:var(--mut)}
+.swap-icon{width:22px;height:22px}.currency-option .currency-icon-img{box-shadow:0 0 0 1px var(--line)}
+.currency-option.is-filtered-out{display:none}.currency-option.is-selected{background:var(--solid);box-shadow:inset 0 0 0 1px var(--line-strong)}
+.currency-pair{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}.currency-pair img{border-radius:50%;box-shadow:0 0 0 1px var(--line)}.pair-arrow{width:16px;height:16px;color:var(--mut)}
+.currency-amount{display:inline-flex;align-items:center;gap:10px;margin-top:6px}.header-login{display:inline-flex;align-items:center;gap:7px}.header-login .ui-icon{width:18px;height:18px}.brand-mark img{width:100%;height:100%;border-radius:50%}
+.copy-btn{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}.copy-btn .ui-icon{width:16px;height:16px}
+.field input{width:100%}.direction-bar{min-width:0}.direction-pair{min-width:0;flex-wrap:wrap}.direction-pair strong{white-space:nowrap}.direction-arrow{flex:0 0 auto}.direction-asset{display:inline-flex;align-items:center;gap:9px;min-width:0}.direction-asset strong{white-space:nowrap}
+.modal-card{max-height:min(680px,calc(100vh - 32px));overflow:auto}.currency-list{min-height:0}.pay-address{min-width:0}.pay-address code{min-width:0;word-break:break-all}.order-actions .btn{max-width:100%}
+@media(max-width:520px){.exchange-card{padding:18px}.field{padding:8px 10px}.field input{font-size:17px}.cur-btn{min-width:106px;padding:0 10px}.currency-icon-img{width:30px;height:30px;flex-basis:30px}.direction-pair{gap:8px}.pay-address{align-items:stretch;flex-direction:column}.copy-btn{width:100%;justify-content:center}.site-footer nav{grid-template-columns:1fr}}
+/* Simplified stable controls while motion is disabled */
+.seg{display:flex}.seg-slider{display:none}.seg button{flex:1;min-width:0}.seg button.is-active{background:var(--solid);box-shadow:inset 0 0 0 1px var(--line)}
