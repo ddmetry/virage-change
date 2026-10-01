@@ -45,7 +45,10 @@ async function walk(dir){
       }
     }
     if(name.endsWith('.css')){
-      for(const m of text.matchAll(/url\((?:['"]?)(\/[^)'"\s]*)/g))resolveInternal(m[1]);
+      for(const m of text.matchAll(/url\((?:['"]?)(\/[^)'"\s]*)/g)){
+        const target=resolveInternal(m[1]);if(!target)continue;
+        try{await stat(path.join(out,target))}catch{errors.push(`${rel}: broken CSS asset ${m[1]} -> ${target}`)}
+      }
     }
     if(name.endsWith('.js')&&text.includes('__BASE_PATH__'))errors.push(`${rel}: unresolved __BASE_PATH__`);
   }
